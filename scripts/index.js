@@ -1,10 +1,10 @@
-
+var scope = 'hello/';
 var registration;
 
 var sw = navigator.serviceWorker;
 
 function register() {
-    sw.register('./scripts/sw.js')
+    sw.register('./scripts/sw.js', {"scope": scope})
       .then(function(reg) {
             console.log("registration: ");
             registration = reg;
