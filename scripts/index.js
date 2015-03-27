@@ -1,5 +1,5 @@
 
-var scope = '/hello';
+var scope = './';
 var registration;
 
 var sw = navigator.serviceWorker;
