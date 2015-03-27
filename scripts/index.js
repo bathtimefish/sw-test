@@ -4,7 +4,7 @@ var registration;
 var sw = navigator.serviceWorker;
 
 function register() {
-    sw.register('sw.js')
+    sw.register('./scripts/sw.js')
       .then(function(reg) {
             console.log("registration: ");
             registration = reg;
