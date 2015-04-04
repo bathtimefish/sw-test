@@ -4,7 +4,8 @@ var registration;
 var sw = navigator.serviceWorker;
 
 function register() {
-    sw.register('scripts/sw.js', {"scope": scope})
+    // index.html 以下のURLをスコープするため index.js, sw.js はindex.htmlと同ディレクトリに配置する
+    sw.register('sw.js', {"scope": scope})
       .then(function(reg) {
             console.log("registration: ");
             registration = reg;
