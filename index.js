@@ -68,26 +68,6 @@ function push() {
           console.error(whut);
       });
 }
-function subscribe() {
-    // Execute after SW registration.
-    sw.ready.then(function(swReg) {
-        // Do we already have a push message subscription?
-        console.log('SW ready.');
-        console.log(swReg);
-        swReg.pushManager.subscribe().then(function(sub) {
-            if (!sub) {
-                console.error('sub is null.');
-                return;
-            }
-            console.log(sub);
-            // get Information for GCM
-            console.log('Registration ID: ' + sub.subscriptionId);
-            console.log('GCM URL: ' + sub.endpoint);
-        }).catch(function(err) {
-            console.error('Error during getSubscription()', err);
-        });
-    });
-}
 function request_push_permission() {
     Notification.requestPermission(function (status) {
         console.log(status);
