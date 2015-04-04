@@ -3,6 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title>Service Workers Test</title>
+        <!-- Include manifest file in the page -->
+        <link rel="manifest" href="manifest.json">
     </head>
     <body>
         <h1>Basic</h1>
@@ -43,6 +45,17 @@
         <ul>
             <li><a href="moment/">import Moment</a>
         </ul>
+        <hr>
+        <h1>Push Notification</h1>
+        <p>結果: </p>
+        <p></p>
+        <p></p>
+        <div>
+            <button onclick="request_push_permission()">Request Permission</button>
+            <button onclick="push()">Register</button>
+            <button onclick="unregister()">Unregister</button>
+        </div>
+        <div id="curl"></div>
 
         <script src="index.js"></script>
     </body>
