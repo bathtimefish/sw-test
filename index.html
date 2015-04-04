@@ -5,16 +5,44 @@
         <title>Service Workers Test</title>
     </head>
     <body>
-        <h1>Service Worker</h1>
+        <h1>Basic</h1>
+        <p><a href="https://googlechrome.github.io/samples/service-worker/basic/index.html">Basic</a>のパクり</p>
+        <p>結果: 成功 </p>
+        <p>worldをクリックすると!をつけたレスポンスが返る。Clevelandをクリックすると!!!をつけたレスポンスが返る。</p>
         <div>
-            <button onclick="register()">Register</button>
+            <button onclick="basic()">Register</button>
             <button onclick="unregister()">Unregister</button>
         </div>
         <p>Some nice places to visit:</p>
         <ul>
-        <li><a href="hello/world">world</a>
-        <li><a href="hello/Cleveland">Cleveland</a>
+            <li><a href="hello/world">world</a>
+            <li><a href="hello/Cleveland">Cleveland</a>
         </ul>
+        <hr>
+        <h1>jQuery in Worker</h1>
+        <p>結果: 失敗</p>
+        <p>register時、DOMExceptionとなる。documentオブジェクトがないためか？</p>
+        <div>
+            <button onclick="jq()">Register</button>
+            <button onclick="unregister()">Unregister</button>
+        </div>
+        <p>Some nice places to visit:</p>
+        <ul>
+            <li><a href="jq/">import jQuery</a>
+        </ul>
+        <hr>
+        <h1>Moment.js in Worker</h1>
+        <p>結果: 成功</p>
+        <p>documentとかnavigatorとかのメソッド使ってないライブラリなら普通に使えそう。当たり前か。</p>
+        <div>
+            <button onclick="moment()">Register</button>
+            <button onclick="unregister()">Unregister</button>
+        </div>
+        <p>Some nice places to visit:</p>
+        <ul>
+            <li><a href="moment/">import Moment</a>
+        </ul>
+
         <script src="index.js"></script>
     </body>
 </html>
