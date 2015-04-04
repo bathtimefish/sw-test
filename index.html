@@ -34,6 +34,7 @@
         <h1>Moment.js in Worker</h1>
         <p>結果: 成功</p>
         <p>documentとかnavigatorとかのメソッド使ってないライブラリなら普通に使えそう。当たり前か。</p>
+        <p>window.Date はworker内で self.Date として使える。window関数はselfとして使えると考えてよいか。</p>
         <div>
             <button onclick="moment()">Register</button>
             <button onclick="unregister()">Unregister</button>

@@ -4,6 +4,7 @@ importScripts('bower_components/moment/min/moment.min.js');    // 外部スク�
 
 self.onfetch = function(event) {
     console.log('moment reqested.');
+    console.log(new self.Date());   // worker内では window.Date は self.Date に置き換えられている
     var mDate = window.moment().add(3, 'days').format('llll');
     var mStr = mDate + ' is date after 3 days now.';
     var html = '<!doctype html><html><body><h1>Response by Service Worker</h1><p>' + mStr + '</p></body></html>';
