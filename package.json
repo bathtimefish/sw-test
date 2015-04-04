@@ -1,0 +1,22 @@
+{
+  "name": "serviceworker-test",
+  "version": "1.0.0",
+  "description": "a test of service workers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bathtimefish/sw-test.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bathtimefish/sw-test/issues"
+  },
+  "homepage": "https://github.com/bathtimefish/sw-test",
+  "devDependencies": {
+    "local-web-server": "^0.5.18"
+  }
+}
