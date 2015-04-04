@@ -1,3 +1,5 @@
+// ./hello/ 以下をService Workerのスコープとする
+// registerされたSWは ./hello/ 以下のリクエスト等をフックする
 var scope = 'hello/';
 var registration;
 
