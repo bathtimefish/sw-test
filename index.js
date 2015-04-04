@@ -1,4 +1,4 @@
-var scope = 'scripts/hello/';
+var scope = 'hello/';
 var registration;
 
 var sw = navigator.serviceWorker;
